@@ -15,3 +15,4 @@
 		</script>
 	</body>
 </html>
+//history.pushState('','','/?show-this-URL-to-hide-original-endpoints')
